@@ -1,0 +1,38 @@
+//the following is incomplete
+
+using System;
+
+namespace EmployeeTracker
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      var employees = new List<Employee>();
+      var adding = true;
+      
+      while (adding)
+      {
+        var newEmployee = new Employee();
+        
+        Console.WriteLine("Employee name: ");
+        newEmployee.Name = Console.ReadLine();
+        
+        Console.WriteLine("Employee phone: ");
+        //int.Parse is needed in the following because the phone number will need to be converted from string to integer
+        newEmployee.Phone = int.Parse(Console.ReadLine());
+        
+        employees.Add(newStudent);
+      }
+      foreach (var employee in employees)
+      {
+        Console.WriteLine("Name: {0}, Phone: {1}", employee.Name, employee.Phone);
+      }
+    }
+  }
+  
+  class Employee
+  {
+    public string Name;
+    public string Phone;
+  }
