@@ -1,0 +1,35 @@
+using System;
+class Calculate 
+{
+  static void Main() 
+  {
+    string[] allowed = new string[4] {"Add", "Sub", "Mult", "Div"};
+    Console.WriteLine("What kind of calculation do you want to perform (Add, Sub, Mult, or Div?");
+    string choice = Console.ReadLine();
+    
+    Console.WriteLine("Write the first number");
+    string firstNumberText = Console.ReadLine();
+    int firstNumber = int.Parse(firstNumberText);
+    
+    Console.WriteLine("Write the second number");
+    string secondNumberText = Console.ReadLine();
+    int secondNumber = int.Parse(secondNumberText);    
+    
+    if (choice == "Add") {
+     int sumResult = firstNumber + secondNumber;
+     Console.WriteLine("The result is: " + sumResult); }
+    
+    else if (choice == "Sub") {
+     int subResult = firstNumber - secondNumber;
+     Console.WriteLine("The result is: " + subResult); }
+     
+    else if (choice == "Mult") {
+     int multResult = firstNumber * secondNumber;
+     Console.WriteLine("The result is: " + multResult); }
+    
+    else {
+     int divResult = firstNumber / secondNumber;
+     Console.WriteLine("The result is: " + divResult); }
+    
+  }
+}
